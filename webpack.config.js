@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require('webpack');
 
 module.exports = {
   entry: "./src/index.js", // Your main React entry point
@@ -15,10 +16,23 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i, // Add support for image and SVG files
+        type: 'asset/resource', // Use Webpack's asset/resource for file handling
+        generator: {
+          filename: 'assets/images/[name][hash][ext]', // Output to `assets/images/` directory
+        },
+      },
     ],
   },
   resolve: {
     extensions: [".js", ".jsx"],
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      React: 'react', // Automatically includes `React` in all files
+    }),
+  ],
   mode: "development", // You can switch to 'production' for production builds
+  devtool: 'inline-source-map', // or 'cheap-module-source-map' for better source maps
 };

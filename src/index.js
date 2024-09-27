@@ -1,13 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
+import App from './App'
 
-const App = () => {
-  return (
-    <div>
-      <h1>Hello from React!</h1>
-      <p>We are using React with Electron.</p>
-    </div>
-  );
-};
-
-ReactDOM.render(<App />, document.getElementById("root"));
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<App />);
