@@ -6,7 +6,7 @@
   "description": "DOJi",
   "scripts": {
     "dev": "concurrently \"webpack --watch --mode development\" \"NODE_ENV=dev electron-forge start\"",
-    "build:mac": "webpack --mode production && npx electron-forge import && npx electron-forge make --platform darwin",
+    "build:mac": "webpack --mode production && npx electron-forge import && npx electron-forge make --platform darwin --arch=x64",
     "build:win": "webpack --mode production && npx electron-forge import && npx electron-forge make --platform win32 --arch=x64",
     "package": "electron-forge package",
     "lint": "prettier -w .",
