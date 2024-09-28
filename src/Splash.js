@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import doji from "./assets/doji.png";
+import doji from "@/assets/doji.png";
 
 function Splash({ className }) {
   return (

@@ -1,10 +1,18 @@
 import styled from "styled-components";
-import Splash from "./Splash";
+// import Splash from "@/src/Splash";
+import ChartOne from "@/src/ChartOne";
+import ChartTwo from "@/src/ChartTwo";
+import ChartThree from "@/src/ChartThree";
+import ChartFour from "@/src/ChartFour";
 
 function App({ className }) {
   return (
     <section className={className}>
-      <Splash />
+      {/* <Splash /> */}
+      <ChartOne />
+      <ChartTwo />
+      <ChartThree />
+      <ChartFour />
     </section>
   );
 }

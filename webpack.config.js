@@ -26,6 +26,9 @@ module.exports = {
     ],
   },
   resolve: {
+    alias: {
+      "@": path.resolve(__dirname), // Add alias `@` to map to the `src` directory
+    },
     extensions: [".js", ".jsx"],
   },
   plugins: [
