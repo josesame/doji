@@ -38,7 +38,6 @@
     "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1",
     "highcharts": "^11.4.8",
     "highcharts-react-official": "^3.2.1",
     "prettier": "^3.3.3",
