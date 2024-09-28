@@ -1,5 +1,5 @@
 const path = require("path");
-const webpack = require('webpack');
+const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/index.js", // Your main React entry point
@@ -18,9 +18,9 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i, // Add support for image and SVG files
-        type: 'asset/resource', // Use Webpack's asset/resource for file handling
+        type: "asset/resource", // Use Webpack's asset/resource for file handling
         generator: {
-          filename: 'assets/images/[name][hash][ext]', // Output to `assets/images/` directory
+          filename: "assets/images/[name][hash][ext]", // Output to `assets/images/` directory
         },
       },
     ],
@@ -30,9 +30,9 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      React: 'react', // Automatically includes `React` in all files
+      React: "react", // Automatically includes `React` in all files
     }),
   ],
   mode: "development", // You can switch to 'production' for production builds
-  devtool: 'inline-source-map', // or 'cheap-module-source-map' for better source maps
+  devtool: "inline-source-map", // or 'cheap-module-source-map' for better source maps
 };

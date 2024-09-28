@@ -12,7 +12,6 @@ if (process.env.NODE_ENV === "dev") {
 const { app, BrowserWindow } = require("electron");
 const isDev = process.env.NODE_ENV === "dev";
 
-
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -24,11 +23,10 @@ const createWindow = () => {
   });
 
   if (isDev) {
-    mainWindow.loadURL('http://localhost:8080'); // Load from webpack-dev-server
+    mainWindow.loadURL("http://localhost:8080"); // Load from webpack-dev-server
   } else {
-    mainWindow.loadFile('dist/index.html'); // Load from disk in production
+    mainWindow.loadFile("dist/index.html"); // Load from disk in production
   }
-
 
   // and load the index.html of the app.
   mainWindow.loadFile("index.html");

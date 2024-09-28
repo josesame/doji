@@ -1,14 +1,14 @@
-import styled from 'styled-components'
-import doji from './assets/doji.png'
+import styled from "styled-components";
+import doji from "./assets/doji.png";
 
-function Splash({className}) {
+function Splash({ className }) {
   return (
     <main className={className}>
       <h1>DoJi</h1>
       <img src={doji} />
     </main>
   );
-};
+}
 
 export default styled(Splash)`
   background: cyan;
@@ -30,7 +30,6 @@ export default styled(Splash)`
 
     &:hover {
       transform: scale(1.05);
-
     }
   }
-`
+`;

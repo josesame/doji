@@ -22,7 +22,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: "16"
 
       - name: Install dependencies
         run: npm install
@@ -33,9 +33,10 @@ jobs:
             npm run build:mac
           elif [ "${{ matrix.os }}" == "windows-latest" ]; then
             npm run build:win
+          fi
 
       - name: Upload Artifacts (Optional)
-        uses: actions/upload-artifact@v4  # Updated to v4
+        uses: actions/upload-artifact@v4
         with:
           name: electron-build-${{ matrix.os }}
           path: out/make
